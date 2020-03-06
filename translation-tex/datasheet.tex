@@ -1,0 +1,52 @@
+\documentclass[letterpaper]{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage[letterpaper, total={19cm, 25cm}]{geometry}
+\renewcommand\labelitemi{$\star$}
+
+\newcommand{\x}{$\times$}
+
+\begin{document}
+    \begin{center}
+        \includegraphics[scale=0.6]{super-aki.png}
+    \end{center}
+
+    {\large
+    \begin{itemize}
+        \item Super AKI-80 is the most powerful Z80 board with a TMP Z84C015 core clocked
+        at 10MHZ and IO port enhancement.
+        \item Z84C015-10\\
+        The Z84C015 contains a Z80 series CPU, PIO, CTC, CGC and is fully compatible with Z80 software.
+        Ultra high-speed operation of 10MHZ is used, and the system is clocked at 9.8304MHZ according to the
+        baud rate.
+        \item \underline{64 parallel ports.}\\
+        A total of 64 ports, including 16 ports for Z80 PIO phase for parallel IO and 8\x 3\x 2=48 ports
+        for 82C265 (8255\x 2 phases).
+        \item \underline{Powered by MAX232B.}\\
+        Equipped with a level converter IC for RS232C standard, enabling 1ch or 2ch serial communication.
+        \item Backup SRAM\\
+        The battery uses 256K (32Kbyte) SRAM that can be backed up by a battery.
+        \item All the hard to solder flat IC are mounted on board.
+    \end{itemize}
+
+    \begin{center}
+        \begin{tabular}{|l|l|l|}
+            \hline
+            CPU   & Z80CPU-10MHz $\star$                        & Central Processing Unit            \\ \hline
+            PIO   & Z80PIO-10MHz $\star$                        & 2 sets of 8-bit parallel ports     \\ \hline
+            PPI   & 82C265-10                                   & 6 sets of 8-bit parallel ports     \\ \hline
+            SIO   & Z80SIO-10MHz $\star$                        & 2 sets of full duplex serial ports \\ \hline
+            CTC   & Z80CTC-10MHz $\star$                        & 4 sets of counters/timers          \\ \hline
+            CGC   & Z80CGC-10MHz $\star$                        & 4 HALT modes for clock oscillator  \\ \hline
+            WDT   & watchdog timer $\star$                      & Runaway detection timer            \\ \hline
+            CLOCK & 9,8304MHz                                   & 9600Hz\x 1024                      \\ \hline
+            RAM   & 256K SRAM                                   &                                    \\ \hline
+            ROM   & 64K, 128K, 256K                             & 100nSec.                           \\ \hline
+            other & \multicolumn{2}{l|}{Memory backup. MAX232. Reset IC, S8054.}                     \\ \hline
+            size  & \multicolumn{2}{l|}{72mm\x 94mm\x 10mm (Excluding ROM and Battery.)}             \\ \hline
+        \end{tabular}
+    \end{center}
+    }
+    
+\end{document}
